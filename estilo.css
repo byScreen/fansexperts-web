@@ -1,5 +1,22 @@
-:root{--fondo:#ffffff;--texto:#1a1a2e;--gris:#52514e;--acento:#2a78d6}
-@media (prefers-color-scheme:dark){:root{--fondo:#14141c;--texto:#ececf2;--gris:#a9a9b4;--acento:#7fb0f0}}
-body{background:var(--fondo);color:var(--texto);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.6;margin:0;padding:32px 16px}
-main{max-width:720px;margin:0 auto}h1{font-size:1.8rem;margin:0 0 .3rem}h2{font-size:1.15rem;margin-top:1.8rem}
-p,li{color:var(--texto)}.sub{color:var(--gris)}a{color:var(--acento)}footer{margin-top:3rem;color:var(--gris);font-size:.9rem}
+:root{--fondo:#f7f7fb;--tarjeta:#ffffff;--texto:#1a1a2e;--gris:#5b5b6b;--linea:#e3e3ec;--acento:#3b5bdb;--acento-suave:#eef1ff}
+@media (prefers-color-scheme:dark){:root{--fondo:#111118;--tarjeta:#1a1a24;--texto:#ececf2;--gris:#a6a6b5;--linea:#2c2c3a;--acento:#8ea2ff;--acento-suave:#22263d}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--fondo);color:var(--texto);font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.65;font-size:16px}
+a{color:var(--acento);text-decoration:none}a:hover{text-decoration:underline}
+header{border-bottom:1px solid var(--linea);background:var(--tarjeta)}
+.barra{max-width:880px;margin:0 auto;padding:16px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.marca{font-weight:700;font-size:1.1rem;color:var(--texto);letter-spacing:-.01em}.marca span{color:var(--acento)}
+nav a{margin-left:18px;color:var(--gris);font-size:.95rem}nav a:first-child{margin-left:0}
+main{max-width:880px;margin:0 auto;padding:40px 16px 24px}
+.hero h1{font-size:clamp(1.8rem,5vw,2.6rem);line-height:1.15;margin:0 0 12px;letter-spacing:-.02em}
+.hero p{color:var(--gris);font-size:1.1rem;max-width:620px;margin:0}
+.rejilla{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:36px 0}
+.tarjeta{background:var(--tarjeta);border:1px solid var(--linea);border-radius:12px;padding:20px}
+.tarjeta h3{margin:0 0 6px;font-size:1.02rem}.tarjeta p{margin:0;color:var(--gris);font-size:.95rem}
+.doc{background:var(--tarjeta);border:1px solid var(--linea);border-radius:12px;padding:28px clamp(16px,4vw,40px)}
+.doc h1{font-size:1.8rem;margin:0 0 4px;letter-spacing:-.01em}.fecha{color:var(--gris);margin:0 0 24px;font-size:.92rem}
+.doc h2{font-size:1.12rem;margin:28px 0 8px}.doc li{margin-bottom:6px}
+.aviso{background:var(--acento-suave);border-radius:10px;padding:14px 16px;margin:20px 0;font-size:.95rem}
+.idioma{margin-top:40px;padding-top:24px;border-top:1px solid var(--linea)}
+footer{max-width:880px;margin:0 auto;padding:24px 16px 40px;color:var(--gris);font-size:.9rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+footer a{color:var(--gris);margin-right:16px}
